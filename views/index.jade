@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 Some Useful Government Service
+  form.pure-form.pure-form-aligned(method="POST")
+    legend
+    div.pure-control-group
+      label Name:
+      input(id="name" name="name" value="#{data.name?data.name:''}" placeholder="Name")
+    div.pure-control-group
+      label Sex:
+      input(type="radio" name="sex" value="Male")
+      | Male&nbsp;
+      input(type="radio" name="sex" value="Female")
+      | Female
+    div.pure-control-group
+      label Age:
+      input(type="number" name="age" value="#{data.age?data.age:''}" placeholder="Age")
+    div.pure-control-group
+      label Country:
+      select(name="country")
+        option(value="") Choose Country
+        each country in countries
+          option(value="#{country.alpha3Code}" checked=(data.country == country.alpha3Code)) #{country.name}
+    div.pure-controls
+      if (errors)
+        ul
+          each error in errors
+            li #{error}
+      button.pure-button.pure-button-primary(type="submit") Apply
