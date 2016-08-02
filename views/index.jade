@@ -9,9 +9,9 @@ block content
       input(id="name" name="name" value="#{data.name?data.name:''}" placeholder="Name")
     div.pure-control-group
       label Sex:
-      input(type="radio" name="sex" value="Male")
+      input(type="radio" name="sex" value="Male" checked=(data.sex=="Male"))
       | Male&nbsp;
-      input(type="radio" name="sex" value="Female")
+      input(type="radio" name="sex" value="Female" checked=(data.sex=="Female"))
       | Female
     div.pure-control-group
       label Age:
@@ -21,7 +21,7 @@ block content
       select(name="country")
         option(value="") Choose Country
         each country in countries
-          option(value="#{country.alpha3Code}" checked=(data.country == country.alpha3Code)) #{country.name}
+          option(value="#{country.alpha3Code}" selected=(data.country == country.alpha3Code)) #{country.name}
     div.pure-controls
       if (errors)
         ul
