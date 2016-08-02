@@ -3,10 +3,10 @@
 ##About
 This is a very simple application using node / Express and MongoDB that allows the capture of a single form of data.
 
-MongoDB connectivity is managed using [Mongoose](http://mongoosejs.com/) to implement data validation.
-Unit testing is completed with [Mocha](https://mochajs.org/)
-Remote REST calls use [Restler](https://github.com/danwrong/restler)
-UI skinning is done with [PureCSS](http://purecss.io/)
+* MongoDB connectivity is managed using [Mongoose](http://mongoosejs.com/) to implement data validation.
+* Unit testing is completed with [Mocha](https://mochajs.org/)
+* Remote REST calls use [Restler](https://github.com/danwrong/restler)
+* UI skinning is done with [PureCSS](http://purecss.io/)
 
 ##Installation
 To install:
